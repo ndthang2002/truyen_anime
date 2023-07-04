@@ -1,0 +1,168 @@
+<div class="container bg-dark p-0" ng-controller="danhsach">
+    <div class="container bg-dark pt-4">
+        <div class="card border-0 rounded mb-3">
+            <div id="format"
+                class="animate__pulse animate__animated sticker card-header bg-black text-danger text-center fs-5 fw-bold text-uppercase">
+                {{thongtin.ten}}</div>
+            <div class="row g-0" style="background-color: rgb(9, 16, 22);">
+                <div class="col-lg-3 text-center pt-2">
+                    <img src="https://doctruyen3q.info/images/comics/tinh-vo-than-quyet-165.jpg"
+                     class="img-thumbnail rounded-start" alt="...">
+                    <form class="rating mt-2">
+                        <label>
+                          <input type="radio" name="stars" value="1" />
+                          <span class="icon">★</span>
+                        </label>
+                        <label>
+                          <input type="radio" name="stars" value="2" />
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                        </label>
+                        <label>
+                          <input type="radio" name="stars" value="3" />
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>   
+                        </label>
+                        <label>
+                          <input type="radio" name="stars" value="4" />
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                        </label>
+                        <label>
+                          <input type="radio" name="stars" value="5" />
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                        </label>
+                      </form>
+                </div>
+                
+                <div class="col-lg-8 ">
+                    <div class="card-body pt-0">
+                        <div class="row mb-lg-3 mb-1 mt-2 m-0">
+                            <div class="col-3 bg-black p-2 text-light justify-content-center rounded-start d-flex align-items-center">
+                                <i class="bi bi-tags-fill text-danger pe-1"></i> Thể loại</div>
+                            <div class="col-9 bg-success text-center rounded-end p-2">
+                                <span ng-repeat="x in theloai" class="badge bg-secondary me-2">{{x}}</span>
+
+                            </div>
+                        </div>
+                        <div class="row mb-lg-3 mb-1 m-0">
+                            <div class="col-3 bg-black p-2 text-light justify-content-center rounded-start d-flex align-items-center">
+                                <i class="bi bi-clock-fill text-secondary pe-1"></i> Cập nhật </div>
+                            <div class="col-9 bg-success justify-content-center rounded-end d-flex align-items-center">
+                                <div class="fw-bold">{{thongtin.latestime}}</div>
+                            </div>
+                        </div>
+                        <div class="row mb-lg-3 mb-1 m-0">
+                            <div class="col-3 bg-black p-2 text-light justify-content-center rounded-start d-flex align-items-center">
+                                <i class="bi bi-hourglass-split text-info pe-1"></i> Trạng thái </div>
+                            <div class="col-9 bg-success justify-content-center rounded-end d-flex align-items-center">
+                                <div class="fw-bold">{{thongtin.trangthai}}</div>
+                            </div>
+                        </div>
+                        <div class="row mb-lg-3 mb-1 m-0">
+                            <div class="col-3 bg-black p-2 text-light justify-content-center rounded-start d-flex align-items-center">
+                                <i class="bi bi-star-fill text-warning pe-1"></i> Đánh giá </div>
+                            <div class="col-9 bg-success justify-content-center rounded-end d-flex align-items-center">
+                                <div class="fw-bold text-center">Xếp hạng: 5/5 - 1 Lượt đánh giá</div>
+                            </div>
+                        </div>
+                        <div class="row mb-lg-3 mb-1 m-0">
+                            <div class="col-3 bg-black p-2 text-light justify-content-center rounded-start d-flex align-items-center">
+                                <i class="bi bi-eye-fill text-success pe-1"></i> Lượt xem </div>
+                            <div class="col-9 bg-success justify-content-center rounded-end d-flex align-items-center">
+                                <div class="fw-bold">226</div>
+                            </div>
+                        </div>
+                        <div class="row m-0">
+                            <div class="col-3 bg-black p-2 text-light justify-content-center rounded-start d-flex align-items-center">
+                                <i class="bi bi-heart-fill pe-1" style="color: red;"></i> Theo dõi </div>
+                            <div class="col-9 bg-success justify-content-center rounded-end d-flex align-items-center">
+                                <div class="fw-bold">200</div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 ms-0 m-0">
+                            <a href="#!readcomic/{{thongtin.ten}}" 
+                            class="btn btn-warning col-lg-3 pb-2 pt-2 mb-2 me-3 text-light fw-bold">Đọc từ đầu</a>
+                            <a class="btn btn-warning col-lg-3 pb-2 pt-2 mb-2 me-3 text-light fw-bold">Đọc mới nhất</a>
+                            <a class="btn btn-danger col-lg-3 pb-2 pt-2 mb-2 text-light fw-bold"><i class="bi bi-heart-fill me-1"></i>Theo
+                                dõi</a>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-lg-12 p-3 pt-1">
+                    <div class="title-header text-danger text-center fw-bold  bg-black rounded p-2 pe-3">
+                        Lịch ra truyện</div>
+                    <div class="right-content ps-2 pt-2 pe-2 text-light">
+                       <span>-</span> Chap mới ra lúc : Thứ 7 hàng tuần.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row m-1 rounded pb-5" style="background-color: rgb(9, 16, 22);">
+            <div class="col-lg-4 p-2">
+                <div class="title-header text-danger fw-bold text-center bg-black rounded p-2 pe-3">
+                    Danh sách chap</div>
+                <div class="scroll p-2 ps-3  ">
+                    <div class="row">
+                        <a ng-repeat="x in chapter" href="#!{{thongtin.ten}}/chapter/{{$index}}"
+                            class="btn btn-secondary col-2 text-center me-2 mb-2">
+                            {{$index+1}}
+                            </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 p-2">
+                <div class="title-header text-danger text-center fw-bold  bg-black rounded p-2 pe-3">
+                    Nội dung</div>
+                <div class="right-content p-3 text-light">
+                    {{thongtin.noidung}}
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+    <br>
+
+    <div class="container pb-5">
+        <h5 class="card-title text-danger mb-4 ms-3"><i class="bi bi-list-stars me-2"></i>Truyện khác</h5>
+        <div class="row">
+            <a ng-repeat="x in danhsach |filter:{ten:tim} |limitTo:6:start"
+                href="#!thongtintruyen/{{x.id}}/{{x.ten}}" class="text-light col-6 col-lg-2 mt-3 mb-3">
+                <div class="card nb bg-dark border">
+                    <div class="card-header card-header-title">{{x.ten}}</div>
+                    <img src="{{x.hinh}}" id="img-noibat" class="img-fluid" style="height: 220px;" alt="...">
+                    <div class="w-100 tgvachap clearfix" style="overflow: hidden;">
+                        <span class="badge bg-danger col-lg-5 float-start">chap {{x.chapter}}</span>
+                        <span class="badge bg-dark col-lg-6 float-end">{{x.latestime}}</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <nav aria-label="Page navigation example" class="mt-4 mb-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item {{disdau}}">
+                    <button class="page-link" ng-click="Previous()" class="page-link">Previous</button>
+                </li>
+
+                <li class="page-item {{discuoi}}">
+                    <button ng-click="next()" class="page-link">Next</button>
+                </li>
+            </ul>
+        </nav>
+        <div class="fb-like ms-4 mt-5" data-colorscheme="dark"
+            data-href="https://www.facebook.com/P%E1%BB%9D-Rom-113125644156959" data-width="" data-layout="standard"
+            data-action="like" data-size="large" data-share="true"></div>
+    </div>
+
+</div>

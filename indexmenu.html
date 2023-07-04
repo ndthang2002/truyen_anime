@@ -1,0 +1,311 @@
+<div class="card bg-dark p-3">
+    <div class="card-body p-0">
+        <h5 class="card-title text-danger mb-4"><i class="bi bi-gem text-primary me-2"></i>Top 18 Tuần này</h5>
+        <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                    class="active bg-light" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2" class="bg-light"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3" class="bg-light"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <div class="row">
+                        <a ng-repeat="x in danhsach | filter:{ten:tim}| orderBy:'-view'|limitTo:6:0 "
+                            href="#!thongtintruyen/{{x.id}}/{{x.ten}}" class="text-light col-6 col-lg-2">
+                            <div class="card nb bg-dark border">
+                                <div class="card-header card-header-title">{{x.ten}}</div>
+                                <img src="{{x.hinh}}" id="img-noibat" class="img-fluid" style="height: 250px;"
+                                    alt="...">
+                                <div class="w-100 tgvachap clearfix" style="overflow: hidden;">
+                                    <span class="badge bg-danger col-lg-5 float-start">chap {{x.chapter}}</span>
+                                    <span class="badge bg-dark col-lg-6 float-end">{{x.latestime}}</span>
+                                </div>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="row">
+                        <a ng-repeat="x in danhsach | filter:{ten:tim}| orderBy:'-view'|limitTo:6:6"
+                            href="#!thongtintruyen/{{x.id}}/{{x.ten}}" class="text-light col-6 col-lg-2">
+                            <div class="card nb bg-dark border">
+                                <div class="card-header card-header-title">{{x.ten}}</div>
+                                <img src="{{x.hinh}}" id="img-noibat" class="img-fluid" style="height: 250px;"
+                                    alt="...">
+                                <div class="w-100 tgvachap clearfix" style="overflow: hidden;">
+                                    <span class="badge bg-danger col-lg-5 float-start">chap {{x.chapter}}</span>
+                                    <span class="badge bg-dark col-lg-6 float-end">{{x.latestime}}</span>
+                                </div>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="row">
+                        <a ng-repeat="x in danhsach | filter:{ten:tim}| orderBy:'-view'|limitTo:6:12"
+                            href="#!thongtintruyen/{{x.id}}/{{x.ten}}" class="text-light col-6 col-lg-2">
+                            <div class="card nb bg-dark border">
+                                <div class="card-header card-header-title">{{x.ten}}</div>
+                                <img src="{{x.hinh}}" id="img-noibat" class="img-fluid" style="height: 250px;"
+                                    alt="...">
+                                <div class="w-100 tgvachap clearfix" style="overflow: hidden;">
+                                    <span class="badge bg-danger col-lg-5 float-start">chap {{x.chapter}}</span>
+                                    <span class="badge bg-dark col-lg-6 float-end">{{x.latestime}}</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+        </div> -->
+<!--  -->
+        <div id="carouselExampleDark" class="carousel carousel-light slide">
+            <div class="carousel-indicators" style="position: absolute; bottom: -60px;">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active slide-button" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="slide-button" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class="slide-button" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <div class="row">
+                    <a ng-repeat="x in danhsach | filter:{ten:tim}| orderBy:'-view'|limitTo:6:0 "
+                        href="#!thongtintruyen/{{x.id}}/{{x.ten}}" class="text-light col-6 col-lg-2">
+                        <div class="card nb bg-dark border">
+                            <div class="card-header card-header-title">{{x.ten}}</div>
+                            <img src="{{x.hinh}}" id="img-noibat" class="img-fluid" style="height: 250px;"
+                                alt="...">
+                            <div class="w-100 tgvachap clearfix" style="overflow: hidden;">
+                                <span class="badge bg-danger col-lg-5 float-start">chap {{x.chapter}}</span>
+                                <span class="badge bg-dark col-lg-6 float-end">{{x.latestime}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <div class="row">
+                    <a ng-repeat="x in danhsach | filter:{ten:tim}| orderBy:'-view'|limitTo:6:6"
+                        href="#!thongtintruyen/{{x.id}}/{{x.ten}}" class="text-light col-6 col-lg-2">
+                        <div class="card nb bg-dark border">
+                            <div class="card-header card-header-title">{{x.ten}}</div>
+                            <img src="{{x.hinh}}" id="img-noibat" class="img-fluid" style="height: 250px;"
+                                alt="...">
+                            <div class="w-100 tgvachap clearfix" style="overflow: hidden;">
+                                <span class="badge bg-danger col-lg-5 float-start">chap {{x.chapter}}</span>
+                                <span class="badge bg-dark col-lg-6 float-end">{{x.latestime}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                    <a ng-repeat="x in danhsach | filter:{ten:tim}| orderBy:'-view'|limitTo:6:12"
+                        href="#!thongtintruyen/{{x.id}}/{{x.ten}}" class="text-light col-6 col-lg-2">
+                        <div class="card nb bg-dark border">
+                            <div class="card-header card-header-title">{{x.ten}}</div>
+                            <img src="{{x.hinh}}" id="img-noibat" class="img-fluid" style="height: 250px;"
+                                alt="...">
+                            <div class="w-100 tgvachap clearfix" style="overflow: hidden;">
+                                <span class="badge bg-danger col-lg-5 float-start">chap {{x.chapter}}</span>
+                                <span class="badge bg-dark col-lg-6 float-end">{{x.latestime}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+              </div>
+
+            </div>
+            <button class="carousel-control-prev"  type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+    </div>
+</div>
+<br><br><hr style="color: wheat;"><br>
+<div class="pb-3 m-2 mb-3">
+    <div class="row p-0 m-0 ">
+        <div class="col-lg-8 m-0 p-0 ps-lg-5 ">
+          <div class="row ">
+                 <h5 class="card-title text-danger mb-4 col-lg-6 col-8 ps-4"><i class="bi bi-list-stars"></i>Danh sách truyện</h5>
+                 <div class="col-lg-5 col-4 pe-4 text-end ">
+            <button class="btn btn-secondary " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <i class="bi bi-funnel-fill text-warning"></i> 
+  </button>
+  </div>
+          </div>
+
+<div class="collapse ps-2 " id="collapseExample">
+  <div class="card border-0 rounded-0 border-bottom border-3  border-secondary  card-body conten-Fillter bg-dark text-light " >
+    <div class="row p-0 m-0">
+      <div class="col-lg-5 mb-2  d-flex align-items-center">
+        <div class="col-5 col-lg-5 ">Số chapter:  </div>
+        <div class="col-5 col-lg-5" >
+     <select class="form-select    " aria-label=".form-select-lg example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+</div>
+      </div>
+
+      <div class="col-lg-5 d-flex align-items-center">
+         <div class="col-5"> Tình trạng :</div>
+         <div class="col-5">
+     <select class="form-select  mb-3" aria-label=".form-select-lg example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+         </div>
+      </div>
+    </div>
+
+        <div class="row p-0 m-0">
+      <div class="col-lg-5 mb-2 mb-lg-0  d-flex align-items-center">
+        <div class="col-5 col-lg-5 ">Dành cho:  </div>
+        <div class="col-5 col-lg-5" >
+     <select class="form-select " aria-label=".form-select-lg example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+</div>
+      </div>
+
+      <div class="col-lg-5 d-flex align-items-center">
+         <div class="col-5">Sắp xếp theo:</div>
+         <div class="col-5">
+     <select class="form-select  mb-3" aria-label=".form-select-lg example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+         </div>
+      </div>
+    </div>
+
+  </div>  
+</div>
+            
+            <div class="row p-0 m-0 mt-3">
+                <div ng-repeat="x in danhsach |filter:{ten:tim} |limitTo:30:start" class="col-lg-2 col-6 m-lg-2 grid-comic-padding ">
+                <a
+                    href="#!thongtintruyen/{{x.id}}/{{x.ten}}" class="text-light  p-0 ">
+                    <div class="card nb bg-dark border">
+                        <div class="card-header card-header-title">{{x.ten}}</div>
+                        <img src="{{x.hinh}}" id="img-noibat" class="img-fluid" style="height: 200px;" alt="...">
+                        <div class="w-100 tgvachap clearfix" style="overflow: hidden;">
+                            <span class="badge bg-danger col-lg-5 float-start">chap {{x.chapter}}</span>
+                            <span class="badge bg-dark col-lg-6 float-end">{{x.latestime}}</span>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-12 m-0 p-2 pe-0 pe-lg-5">
+            <nav class="border rounded-top">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <!-- <button class="nav-link active button-statistics-button" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab" type="button" role="tab" aria-controls="nav-all" aria-selected="true">Top All</button> -->
+                  <button class="nav-link active button-statistics-button" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Top Ngày</button>
+                  <button class="nav-link button-statistics-button" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Top Tuần</button>
+                  <button class="nav-link button-statistics-button" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Top Tháng</button>
+                </div>
+              </nav>
+              <div class="tab-content border text-light" id="nav-tabContent">
+                <div class="tab-pane fade show active p-1 mt-2" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                        <div class="row p-0 m-0 align-items-center">
+                            <p class="col-lg-1 col-1 m-0 ">01</p>
+                            <div class="col-lg-10 col-10 d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="https://nettruyenco.vn/public/images/comics/black-clover-the-gioi-phep-thuat.jpg"
+                                     width="50" height="50" alt="...">
+                                </div>
+                                <div class="ms-1 position-relative col-lg-10 col-10" >
+                                    <h3  class="card-header-title p-0 text-start">Musubu</h3>
+                                    <div style="font-size: 13px; color: rgb(196, 196, 196);" class="m-0 fw-bold position-absolute bottom-0" >Chapter 26</div>
+                                    <div style="font-size: 11px; color: rgb(173, 173, 146); font-style: italic;" class="position-absolute bottom-0 end-0">300M <i class="bi bi-eye-fill"></i></div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <hr class="m-2">
+                        <div class="row p-0 m-0 align-items-center">
+                            <p class="col-lg-1 col-1 m-0 ">02</p>
+                            <div class="col-lg-10 col-10 d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="https://www.nettruyenco.vn/public/images/comics/toi-lac-vao-the-gioi-tro-choi-harem-nguoc.jpg"
+                                     width="50" height="50" alt="...">
+                                </div>
+                                <div class="ms-1 position-relative col-lg-10 col-10" >
+                                    <h3  class="card-header-title p-0">Tôi Lạc Vào Thế Giới Trò Chơi Harem Ngược</h3>
+                                    <div style="font-size: 13px; color: rgb(196, 196, 196);" class="m-0 fw-bold position-absolute bottom-0" >Chapter 26</div>
+                                    <div style="font-size: 11px; color: rgb(173, 173, 146); font-style: italic;" class="position-absolute bottom-0 end-0">300M <i class="bi bi-eye-fill"></i></div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <hr class="m-2">
+                        <div class="row p-0 m-0 align-items-center">
+                            <p class="col-lg-1 col-1 m-0 ">03</p>
+                            <div class="col-lg-10 col-10 d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="https://www.nettruyenco.vn/public/images/comics/hong-long-dung-gia-khong-phai-nguoi-luong-thien.jpg"
+                                     width="50" height="50" alt="...">
+                                </div>
+                                <div class="ms-1 position-relative col-lg-10 col-10" >
+                                    <h3 class="card-header-title text-start p-0">Hồng Long Dũng Giả Không Phải Người Lương Thiện</h3>
+                                    <div style="font-size: 13px; color: rgb(196, 196, 196);" class="m-0 fw-bold position-absolute bottom-0" >Chapter 26</div>
+                                    <div style="font-size: 11px; color: rgb(173, 173, 146); font-style: italic;" class="position-absolute bottom-0 end-0">300M <i class="bi bi-eye-fill"></i></div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <hr class="m-2">
+                        
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
+              </div>
+
+              <div class="comment-facebook ">
+                <div class="fb-comments bg-light w-100" data-mobile="true" colorscheme="light"  data-href="http://127.0.0.1:5501/index.html" data-width="100%" data-numposts="5"></div>
+              </div>
+        </div>
+    </div>
+
+
+    <nav aria-label="Page navigation example" class="mt-4">
+        <ul class="pagination justify-content-center">
+            <li class="page-item {{disdau}}">
+                <button class="page-link" ng-click="Previous()" class="page-link">Previous</button>
+            </li>
+
+            <li class="page-item {{discuoi}}">
+                <button ng-click="next()" class="page-link">Next</button>
+            </li>
+        </ul>
+    </nav>
+    <div class="fb-like ms-4 mt-4" data-colorscheme="dark"
+        data-href="https://www.facebook.com/P%E1%BB%9D-Rom-113125644156959" data-width="" data-layout="standard"
+        data-action="like" data-size="large" data-share="true"></div>
+</div>

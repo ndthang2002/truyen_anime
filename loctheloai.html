@@ -1,0 +1,102 @@
+<div class="card bg-dark">
+    <div class="card-body">
+        <h5 class="card-title text-danger mb-4"><i class="bi bi-gem text-primary me-2"></i>Top 18 Tuần này</h5>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                    class="active bg-light" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2" class="bg-light"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3" class="bg-light"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <div class="row">
+                        <a ng-repeat="x in danhsach | filter:{ten:tim}| orderBy:'-view'|limitTo:6 "
+                            href="#!thongtintruyen/{{x.id}}/{{x.ten}}" class="text-light col-lg-2">
+                            <div class="card nb bg-dark border">
+                                <div class="card-header card-header-title">{{x.ten}}</div>
+                                <img src="{{x.hinh}}" id="img-noibat" class="img-fluid" style="height: 250px;"
+                                    alt="...">
+                                <div class="w-100 tgvachap clearfix" style="overflow: hidden;">
+                                    <span class="badge bg-danger col-lg-5 float-start">chap {{x.chapter}}</span>
+                                    <span class="badge bg-dark col-lg-6 float-end">{{x.latestime}}</span>
+                                </div>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="row">
+                        <a ng-repeat="x in danhsach | filter:{ten:tim}| orderBy:'-view'|limitTo:6:6"
+                            href="#!thongtintruyen/{{x.id}}/{{x.ten}}" class="text-light col-lg-2">
+                            <div class="card nb bg-dark border">
+                                <div class="card-header card-header-title">{{x.ten}}</div>
+                                <img src="{{x.hinh}}" id="img-noibat" class="img-fluid" style="height: 250px;"
+                                    alt="...">
+                                <div class="w-100 tgvachap clearfix" style="overflow: hidden;">
+                                    <span class="badge bg-danger col-lg-5 float-start">chap {{x.chapter}}</span>
+                                    <span class="badge bg-dark col-lg-6 float-end">{{x.latestime}}</span>
+                                </div>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="row">
+                        <a ng-repeat="x in danhsach | filter:{ten:tim}| orderBy:'-view'|limitTo:6:12"
+                            href="#!thongtintruyen/{{x.id}}/{{x.ten}}" class="text-light col-lg-2">
+                            <div class="card nb bg-dark border">
+                                <div class="card-header card-header-title">{{x.ten}}</div>
+                                <img src="{{x.hinh}}" id="img-noibat" class="img-fluid" style="height: 250px;"
+                                    alt="...">
+                                <div class="w-100 tgvachap clearfix" style="overflow: hidden;">
+                                    <span class="badge bg-danger col-lg-5 float-start">chap {{x.chapter}}</span>
+                                    <span class="badge bg-dark col-lg-6 float-end">{{x.latestime}}</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="container pb-5" style="padding: 5px 50px;">
+    <h5 class="card-title text-danger mb-4"><i class="bi bi-list-stars me-2"></i>Thể loại {{theloaiparam}}</h5>
+    <div class="row">
+        <a ng-repeat="x in danhsach |filter:{theloai:theloaiparam,ten:tim} |limitTo:6:start"
+            href="#!thongtintruyen/{{x.id}}/{{x.ten}}" class="text-light col-lg-2 mt-3 mb-3">
+            <div class="card nb bg-dark border">
+                <div class="card-header card-header-title">{{x.ten}}</div>
+                <img src="{{x.hinh}}" id="img-noibat" class="img-fluid" style="height: 220px;" alt="...">
+                <div class="w-100 tgvachap clearfix" style="overflow: hidden;">
+                    <span class="badge bg-danger col-lg-5 float-start">chap {{x.chapter}}</span>
+                    <span class="badge bg-dark col-lg-6 float-end">{{x.latestime}}</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <nav aria-label="Page navigation example" class="mt-4">
+        <ul class="pagination justify-content-center">
+            <li class="page-item {{disdau}}">
+                <button class="page-link" ng-click="Previous()" class="page-link">Previous</button>
+            </li>
+
+            <li class="page-item {{discuoi}}">
+                <button ng-click="next()" class="page-link">Next</button>
+            </li>
+        </ul>
+    </nav>
+    <div class="fb-like ms-4 mt-5" data-colorscheme="dark"
+        data-href="https://www.facebook.com/P%E1%BB%9D-Rom-113125644156959" data-width="" data-layout="standard"
+        data-action="like" data-size="large" data-share="true"></div>
+</div>
